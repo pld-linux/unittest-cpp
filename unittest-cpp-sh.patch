@@ -1,0 +1,11 @@
+--- unittest-cpp-2.0.0/configure.ac.orig	2017-01-13 23:09:09.000000000 +0100
++++ unittest-cpp-2.0.0/configure.ac	2017-06-22 20:22:34.081053773 +0200
+@@ -19,7 +19,7 @@
+ 
+ dnl Detect Windows, as it doesn't implement UNIX signals and requires special code
+ AM_CONDITIONAL([WINDOWS],
+-               [test "${host//mingw/}" != "${host}" -o "${host//msvc/}" != "${host}"])
++               [echo "$host" | grep -E 'mingw|msvc'])
+ 
+ LT_INIT()
+ 
