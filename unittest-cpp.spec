@@ -56,7 +56,7 @@ linkowania programów testowych.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 # git data not available, hardcode released package version
 %{__sed} -i -e 's/m4_esyscmd_s.*git describe --tags.*/[%{version}],/' configure.ac
